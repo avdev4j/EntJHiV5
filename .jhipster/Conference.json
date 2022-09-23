@@ -1,0 +1,17 @@
+{
+  "microserviceName": "EntJHiV5",
+  "clientRootFolder": "EntJHiV5",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "service": "no",
+  "readOnly": false,
+  "pagination": "no",
+  "name": "Conference",
+  "changelogDate": "20220923143054"
+}
