@@ -75,7 +75,7 @@ class ConferenceTableContainer extends Component {
   }
 
   dispatch(action, afterSetState = () => {}) {
-    this.setState(prevState => reducer(prevState, action), afterSetState);
+    this.setState((prevState) => reducer(prevState, action), afterSetState);
   }
 
   async fetchData() {
@@ -197,7 +197,7 @@ class ConferenceTableContainer extends Component {
     const Actions = ({ item }) =>
       onDelete ? (
         <ConfirmationDialogTrigger
-          onCloseDialog={action => this.handleConfirmationDialogAction(action, item)}
+          onCloseDialog={(action) => this.handleConfirmationDialogAction(action, item)}
           dialog={{
             title: t('entities.conference.deleteDialog.title'),
             description: t('entities.conference.deleteDialog.description'),

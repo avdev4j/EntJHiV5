@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import ConfirmationDialogTrigger from 'components/common/ConfirmationDialogTrigger';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     margin: theme.spacing(3),
   },
@@ -52,62 +52,56 @@ class ConferenceForm extends PureComponent {
       t,
     } = this.props;
 
+    const getHelperText = (field) => (errors[field] && touched[field] ? errors[field] : '');
 
-    const getHelperText = field => (errors[field] && touched[field] ? errors[field] : '');
-
-
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
       e.stopPropagation(); // avoids double submission caused by react-shadow-dom-retarget-events
       formikHandleSubmit(e);
     };
 
     return (
-        <form onSubmit={handleSubmit} className={classes.root} data-testid="conference-form">
-          <Grid container spacing={2}>
-                                        <input type="hidden"
-                id="conference-id"
-                data-testid="conference-id"
-                value={values.id}
-              />
-                                    <Grid item xs={12} sm={6}>
-                            <TextField
-                id="conference-name"
-                error={errors.name && touched.name}
-                helperText={getHelperText('name')}
-                className={classes.textField}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-                name="name"
-                label={t('entities.conference.name')}
-              />
-                        </Grid>
-            {onDelete && (
-              <ConfirmationDialogTrigger
-                onCloseDialog={this.handleConfirmationDialogAction}
-                dialog={{
-                  title: t('entities.conference.deleteDialog.title'),
-                  description: t('entities.conference.deleteDialog.description'),
-                  confirmLabel: t('common.yes'),
-                  discardLabel: t('common.no'),
-                }}
-                Renderer={({ onClick }) => (
-                  <Button onClick={onClick} disabled={isSubmitting} >
-                    {t('common.delete')}
-                  </Button>
-                )}
-              />
-            )}
-
-            <Button onClick={onCancelEditing} disabled={isSubmitting} data-testid="cancel-btn">
-              {t('common.cancel')}
-            </Button>
-
-            <Button type="submit" color="primary" disabled={isSubmitting} data-testid="submit-btn">
-              {t('common.save')}
-            </Button>
+      <form onSubmit={handleSubmit} className={classes.root} data-testid="conference-form">
+        <Grid container spacing={2}>
+          <input type="hidden" id="conference-id" data-testid="conference-id" value={values.id} />
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="conference-name"
+              error={errors.name && touched.name}
+              helperText={getHelperText('name')}
+              className={classes.textField}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.name}
+              name="name"
+              label={t('entities.conference.name')}
+            />
           </Grid>
-        </form>
+          {onDelete && (
+            <ConfirmationDialogTrigger
+              onCloseDialog={this.handleConfirmationDialogAction}
+              dialog={{
+                title: t('entities.conference.deleteDialog.title'),
+                description: t('entities.conference.deleteDialog.description'),
+                confirmLabel: t('common.yes'),
+                discardLabel: t('common.no'),
+              }}
+              Renderer={({ onClick }) => (
+                <Button onClick={onClick} disabled={isSubmitting}>
+                  {t('common.delete')}
+                </Button>
+              )}
+            />
+          )}
+
+          <Button onClick={onCancelEditing} disabled={isSubmitting} data-testid="cancel-btn">
+            {t('common.cancel')}
+          </Button>
+
+          <Button type="submit" color="primary" disabled={isSubmitting} data-testid="submit-btn">
+            {t('common.save')}
+          </Button>
+        </Grid>
+      </form>
     );
   }
 }

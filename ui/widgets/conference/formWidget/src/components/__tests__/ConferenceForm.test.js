@@ -17,10 +17,8 @@ describe('Conference Form', () => {
       </ThemeProvider>
     );
 
-        expect(getByTestId('conference-id').value).toBe(conferenceMock.id.toString());
-    expect(getByLabelText('entities.conference.name').value).toBe(
-        conferenceMock.name
-    );
+    expect(getByTestId('conference-id').value).toBe(conferenceMock.id.toString());
+    expect(getByLabelText('entities.conference.name').value).toBe(conferenceMock.name);
   });
 
   it('submits form', async () => {

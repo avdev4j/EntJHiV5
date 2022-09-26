@@ -9,39 +9,21 @@ describe('ConferenceTable', () => {
   it('shows conferences', () => {
     const { getByText } = render(<ConferenceTable items={conferenceMocks} />);
 
-    expect(getByText(
-          conferenceMocks[0].id.toString()
-    )).toBeInTheDocument();
-    expect(getByText(
-          conferenceMocks[1].id.toString()
-    )).toBeInTheDocument();
+    expect(getByText(conferenceMocks[0].id.toString())).toBeInTheDocument();
+    expect(getByText(conferenceMocks[1].id.toString())).toBeInTheDocument();
 
-    expect(getByText(
-        conferenceMocks[0].name
-    )).toBeInTheDocument();
-    expect(getByText(
-        conferenceMocks[1].name
-    )).toBeInTheDocument();
-
+    expect(getByText(conferenceMocks[0].name)).toBeInTheDocument();
+    expect(getByText(conferenceMocks[1].name)).toBeInTheDocument();
   });
 
   it('shows no conferences message', () => {
     const { queryByText } = render(<ConferenceTable items={[]} />);
 
-    expect(queryByText(
-          conferenceMocks[0].id.toString()
-    )).not.toBeInTheDocument();
-    expect(queryByText(
-          conferenceMocks[1].id.toString()
-    )).not.toBeInTheDocument();
+    expect(queryByText(conferenceMocks[0].id.toString())).not.toBeInTheDocument();
+    expect(queryByText(conferenceMocks[1].id.toString())).not.toBeInTheDocument();
 
-    expect(queryByText(
-        conferenceMocks[0].name
-    )).not.toBeInTheDocument();
-    expect(queryByText(
-        conferenceMocks[1].name
-    )).not.toBeInTheDocument();
-
+    expect(queryByText(conferenceMocks[0].name)).not.toBeInTheDocument();
+    expect(queryByText(conferenceMocks[1].name)).not.toBeInTheDocument();
 
     expect(queryByText('entities.conference.noItems')).toBeInTheDocument();
   });
@@ -52,9 +34,7 @@ describe('ConferenceTable', () => {
       <ConferenceTable items={conferenceMocks} onSelect={onSelectMock} />
     );
 
-    fireEvent.click(getByText(
-          conferenceMocks[0].id.toString()
-    ));
+    fireEvent.click(getByText(conferenceMocks[0].id.toString()));
     expect(onSelectMock).toHaveBeenCalledTimes(1);
   });
 });

@@ -120,7 +120,7 @@ class ConferenceDetailsElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return evt => {
+    return (evt) => {
       const { tableSelect } = INPUT_EVENT_TYPES;
       const { id } = ATTRIBUTES;
       switch (evt.type) {
@@ -177,7 +177,12 @@ class ConferenceDetailsElement extends HTMLElement {
       <KeycloakContext.Provider value={this.keycloak}>
         <StylesProvider jss={this.jss}>
           <ThemeProvider theme={this.muiTheme}>
-            <ConferenceDetailsContainer id={id} onError={this.onError} serviceUrl={serviceUrl} config={config} />
+            <ConferenceDetailsContainer
+              id={id}
+              onError={this.onError}
+              serviceUrl={serviceUrl}
+              config={config}
+            />
           </ThemeProvider>
         </StylesProvider>
       </KeycloakContext.Provider>,

@@ -1,5 +1,3 @@
 const customElementName = 'conference-form';
 
-export {
-  customElementName
-}
+export { customElementName };

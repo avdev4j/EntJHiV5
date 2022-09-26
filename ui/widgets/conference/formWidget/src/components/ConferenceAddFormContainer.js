@@ -24,7 +24,7 @@ class ConferenceAddFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState({
-      notificationMessage: null
+      notificationMessage: null,
     });
   }
 

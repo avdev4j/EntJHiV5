@@ -52,6 +52,10 @@
     "enableGradleEnterprise": false,
     "lastLiquibaseTimestamp": 1663943454000,
     "entities": ["Conference"],
-    "generateMfeForEntity": true
+    "generateMfeForEntity": true,
+    "clientFramework": "angularX",
+    "clientPackageManager": "npm",
+    "clientTheme": "none",
+    "clientThemeVariant": ""
   }
 }

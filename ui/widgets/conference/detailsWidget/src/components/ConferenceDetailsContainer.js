@@ -51,13 +51,17 @@ class ConferenceDetailsContainer extends React.Component {
   async fetchData() {
     const { keycloak, paginationMode, pagination, config } = this.props;
     const authenticated = keycloak.initialized && keycloak.authenticated;
-    const serviceUrl = config && config.systemParams && config.systemParams.api && config.systemParams.api['conference-api'].url;
+    const serviceUrl =
+      config &&
+      config.systemParams &&
+      config.systemParams.api &&
+      config.systemParams.api['conference-api'].url;
 
     if (authenticated && id) {
       try {
         const conference = await apiConferenceGet(serviceUrl, id);
         this.setState(() => ({
-          conference
+          conference,
         }));
       } catch (err) {
         this.handleError(err);

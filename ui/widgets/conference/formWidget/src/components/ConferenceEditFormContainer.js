@@ -67,7 +67,7 @@ class ConferenceEditFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState(() => ({
-      notificationMessage: null
+      notificationMessage: null,
     }));
   }
 
@@ -135,9 +135,9 @@ class ConferenceEditFormContainer extends PureComponent {
 
     let form;
     if (typeof conference === 'undefined') {
-     form = t('entities.conference.notFound');
+      form = t('entities.conference.notFound');
     } else if (conference === null) {
-      form = t('entities.conference.deleted');;
+      form = t('entities.conference.deleted');
     } else {
       form = (
         <ConferenceForm
@@ -153,9 +153,7 @@ class ConferenceEditFormContainer extends PureComponent {
         <UnauthenticatedView keycloak={keycloak}>
           {t('common.notAuthenticated')}
         </UnauthenticatedView>
-        <AuthenticatedView keycloak={keycloak}>
-         {form}
-        </AuthenticatedView>
+        <AuthenticatedView keycloak={keycloak}>{form}</AuthenticatedView>
         <Notification
           status={notificationStatus}
           message={notificationMessage}
