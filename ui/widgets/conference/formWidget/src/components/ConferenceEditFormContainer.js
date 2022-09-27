@@ -97,7 +97,7 @@ class ConferenceEditFormContainer extends PureComponent {
   }
 
   async handleDelete(conference) {
-    const { keycloak, id, config } = this.props;
+    const { t, onDelete, keycloak, config } = this.props;
     const serviceUrl =
       config &&
       config.systemParams &&
