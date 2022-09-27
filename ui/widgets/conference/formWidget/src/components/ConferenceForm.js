@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import ConfirmationDialogTrigger from 'components/common/ConfirmationDialogTrigger';
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     margin: theme.spacing(3),
   },
@@ -52,9 +52,9 @@ class ConferenceForm extends PureComponent {
       t,
     } = this.props;
 
-    const getHelperText = (field) => (errors[field] && touched[field] ? errors[field] : '');
+    const getHelperText = field => (errors[field] && touched[field] ? errors[field] : '');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
       e.stopPropagation(); // avoids double submission caused by react-shadow-dom-retarget-events
       formikHandleSubmit(e);
     };

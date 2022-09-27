@@ -75,7 +75,7 @@ class ConferenceTableContainer extends Component {
   }
 
   dispatch(action, afterSetState = () => {}) {
-    this.setState((prevState) => reducer(prevState, action), afterSetState);
+    this.setState(prevState => reducer(prevState, action), afterSetState);
   }
 
   async fetchData() {
@@ -197,7 +197,7 @@ class ConferenceTableContainer extends Component {
     const Actions = ({ item }) =>
       onDelete ? (
         <ConfirmationDialogTrigger
-          onCloseDialog={(action) => this.handleConfirmationDialogAction(action, item)}
+          onCloseDialog={action => this.handleConfirmationDialogAction(action, item)}
           dialog={{
             title: t('entities.conference.deleteDialog.title'),
             description: t('entities.conference.deleteDialog.description'),
@@ -264,7 +264,7 @@ ConferenceTableContainer.propTypes = {
     currentPage: PropTypes.number,
     itemsPerPage: PropTypes.number,
   }),
-  config: PropTypes.string,
+  config: PropTypes.object,
 };
 
 ConferenceTableContainer.defaultProps = {
@@ -274,7 +274,7 @@ ConferenceTableContainer.defaultProps = {
   onSelect: () => {},
   paginationMode: '',
   pagination: null,
-  config: '',
+  config: {},
 };
 
 export default withKeycloak(

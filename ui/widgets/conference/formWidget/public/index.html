@@ -16,7 +16,7 @@
     <title>Conference form</title>
     <script src="%REACT_APP_KEYCLOAK_URL%/js/keycloak.js"></script>
     <script>
-      const onLoad = (function () {
+      const onLoad = (function() {
         function createKcDispatcher(payload) {
           return () => window.dispatchEvent(new CustomEvent('keycloak', { detail: payload }));
         }

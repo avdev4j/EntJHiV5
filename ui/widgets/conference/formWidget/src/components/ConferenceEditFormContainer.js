@@ -72,7 +72,7 @@ class ConferenceEditFormContainer extends PureComponent {
   }
 
   async handleSubmit(conference) {
-    const { keycloak, id, config } = this.props;
+    const { t, onUpdate, keycloak, config } = this.props;
     const serviceUrl =
       config &&
       config.systemParams &&
@@ -172,7 +172,7 @@ ConferenceEditFormContainer.propTypes = {
   onDelete: PropTypes.func,
   t: PropTypes.func.isRequired,
   keycloak: keycloakType.isRequired,
-  config: PropTypes.string,
+  config: PropTypes.object,
 };
 
 ConferenceEditFormContainer.defaultProps = {
@@ -180,7 +180,7 @@ ConferenceEditFormContainer.defaultProps = {
   onDelete: () => {},
   onUpdate: () => {},
   onError: () => {},
-  config: '',
+  config: {},
 };
 
 export default withKeycloak(withTranslation()(ConferenceEditFormContainer));

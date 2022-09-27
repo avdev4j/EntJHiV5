@@ -32,7 +32,6 @@ const ATTRIBUTES = {
   hidden: 'hidden',
   locale: 'locale',
   disableDefaultEventHandler: 'disable-default-event-handler', // custom element attribute names MUST be written in kebab-case
-  serviceUrl: 'service-url',
   config: 'config',
 };
 
@@ -120,7 +119,7 @@ class ConferenceDetailsElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return (evt) => {
+    return evt => {
       const { tableSelect } = INPUT_EVENT_TYPES;
       const { id } = ATTRIBUTES;
       switch (evt.type) {

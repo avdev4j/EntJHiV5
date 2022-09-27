@@ -1,13 +1,13 @@
 const conferenceMockEdit = {
-  id: -487,
+  id: -575,
   name:
-    'Repudiandae doloribus soluta laudantium amet nam molestias recusandae. Aperiam magni pariatur incidunt et et non qui officia. Odit consectetur et quia nam ducimus perspiciatis. Aut quo eos ad et est odit est ab.',
+    'Nulla quis qui quia qui. Sint amet perspiciatis voluptas eum consequatur quam qui. Libero necessitatibus ut odio voluptatem ab voluptatem exercitationem. Rerum perferendis debitis ut ipsum qui dolorum. Rerum nemo dolor voluptas.',
 };
 
 const conferenceMockAdd = {
   id: '',
   name:
-    'Repudiandae doloribus soluta laudantium amet nam molestias recusandae. Aperiam magni pariatur incidunt et et non qui officia. Odit consectetur et quia nam ducimus perspiciatis. Aut quo eos ad et est odit est ab.',
+    'Nulla quis qui quia qui. Sint amet perspiciatis voluptas eum consequatur quam qui. Libero necessitatibus ut odio voluptatem ab voluptatem exercitationem. Rerum perferendis debitis ut ipsum qui dolorum. Rerum nemo dolor voluptas.',
 };
 
 export { conferenceMockAdd, conferenceMockEdit };
