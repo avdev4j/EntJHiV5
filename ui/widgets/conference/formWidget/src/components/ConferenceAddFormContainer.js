@@ -88,14 +88,14 @@ ConferenceAddFormContainer.propTypes = {
   onCreate: PropTypes.func,
   t: PropTypes.func.isRequired,
   keycloak: keycloakType.isRequired,
-  config: PropTypes.object,
+  config: PropTypes.func,
 };
 
 ConferenceAddFormContainer.defaultProps = {
   onError: () => {},
   onCancelEditing: () => {},
   onCreate: () => {},
-  config: {},
+  config: () => {},
 };
 
 export default withKeycloak(withTranslation()(ConferenceAddFormContainer));

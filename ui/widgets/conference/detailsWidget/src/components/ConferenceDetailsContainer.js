@@ -111,12 +111,12 @@ ConferenceDetailsContainer.propTypes = {
   onError: PropTypes.func,
   t: PropTypes.func.isRequired,
   keycloak: keycloakType.isRequired,
-  config: PropTypes.object,
+  config: PropTypes.func,
 };
 
 ConferenceDetailsContainer.defaultProps = {
   onError: () => {},
-  config: {},
+  config: () => {},
 };
 
 export default withKeycloak(withTranslation()(ConferenceDetailsContainer));

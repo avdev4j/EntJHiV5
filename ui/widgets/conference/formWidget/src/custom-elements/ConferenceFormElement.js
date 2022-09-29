@@ -130,7 +130,7 @@ class ConferenceFormElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return evt => {
+    return (evt) => {
       const {
         tableAdd,
         cancelEditing,

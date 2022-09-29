@@ -13,7 +13,7 @@ const STRING_FIELDS = ['name'];
 const DATE_FIELDS = [];
 const NUMBER_FIELDS = ['id'];
 
-export const getFieldFilterTypes = field => {
+export const getFieldFilterTypes = (field) => {
   return [
     ...DEFAULT_FILTER_TYPES,
     ...(STRING_FIELDS.includes(field) ? STRING_FILTER_TYPES : []),
@@ -25,7 +25,7 @@ export const getFieldFilterTypes = field => {
 export const getFilterQuery = (filters = []) => {
   if (filters.length) {
     return filters
-      .filter(f => f.field && f.operator)
+      .filter((f) => f.field && f.operator)
       .reduce((acc, f) => {
         switch (f.operator) {
           case 'specified':

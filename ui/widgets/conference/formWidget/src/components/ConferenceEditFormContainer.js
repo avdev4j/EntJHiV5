@@ -172,7 +172,7 @@ ConferenceEditFormContainer.propTypes = {
   onDelete: PropTypes.func,
   t: PropTypes.func.isRequired,
   keycloak: keycloakType.isRequired,
-  config: PropTypes.object,
+  config: PropTypes.func,
 };
 
 ConferenceEditFormContainer.defaultProps = {
@@ -180,7 +180,7 @@ ConferenceEditFormContainer.defaultProps = {
   onDelete: () => {},
   onUpdate: () => {},
   onError: () => {},
-  config: {},
+  config: () => {},
 };
 
 export default withKeycloak(withTranslation()(ConferenceEditFormContainer));

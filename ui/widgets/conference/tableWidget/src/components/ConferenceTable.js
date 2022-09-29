@@ -26,7 +26,7 @@ const styles = {
 };
 
 const ConferenceTable = ({ items, onSelect, classes, t, Actions }) => {
-  const tableRows = items.map(item => (
+  const tableRows = items.map((item) => (
     <TableRow hover className={classes.rowRoot} key={item.id} onClick={() => onSelect(item)}>
       <TableCell>
         <span>{item.id}</span>

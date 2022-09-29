@@ -16,7 +16,7 @@
     <title>Conference form</title>
     <script src="%REACT_APP_KEYCLOAK_URL%/js/keycloak.js"></script>
     <script>
-      const onLoad = (function() {
+      const onLoad = (function () {
         function createKcDispatcher(payload) {
           return () => window.dispatchEvent(new CustomEvent('keycloak', { detail: payload }));
         }
@@ -59,7 +59,7 @@
     <conference-form id="1" />
     <script>
       function injectConfigIntoMfe() {
-        fetch('%PUBLIC_URL%/mfe-config.json').then(async response => {
+        fetch('%PUBLIC_URL%/mfe-config.json').then(async (response) => {
           const config = await response.text();
           const anotherMfeEl = document.getElementsByTagName('conference-form')[0];
           anotherMfeEl.setAttribute('config', config);

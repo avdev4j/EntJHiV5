@@ -1,13 +1,13 @@
 const conferenceMocks = [
   {
-    id: 419,
+    id: -307,
     name:
-      'Non sit cum expedita. Dignissimos nobis doloribus quo velit ad rerum omnis. Molestiae doloribus maiores omnis et quam maxime nihil maxime ut. In culpa cum tenetur doloribus ducimus.',
+      'Atque vitae laboriosam quisquam. Aperiam qui et sed ut aliquam. Ut atque magni molestiae. Quis non deleniti impedit.',
   },
   {
-    id: 225,
+    id: 39,
     name:
-      'Voluptatibus cum qui. Voluptatem omnis sit at. Eum dolor temporibus et est et et aut minus nam. Enim modi ut rem omnis debitis praesentium tempora eveniet sit.',
+      'Dolorum tempora reiciendis magnam perspiciatis quibusdam aperiam. Laborum nihil ea ipsam. Aut praesentium iure. Velit asperiores voluptas nesciunt voluptas deserunt dolorum. Veritatis dignissimos excepturi occaecati.',
   },
 ];
 

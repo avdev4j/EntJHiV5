@@ -1,7 +1,7 @@
 const conferenceApiGetResponse = {
-  id: 419,
+  id: -307,
   name:
-    'Non sit cum expedita. Dignissimos nobis doloribus quo velit ad rerum omnis. Molestiae doloribus maiores omnis et quam maxime nihil maxime ut. In culpa cum tenetur doloribus ducimus.',
+    'Atque vitae laboriosam quisquam. Aperiam qui et sed ut aliquam. Ut atque magni molestiae. Quis non deleniti impedit.',
 };
 
 export default conferenceApiGetResponse;

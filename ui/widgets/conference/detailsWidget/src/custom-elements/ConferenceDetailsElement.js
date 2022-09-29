@@ -119,7 +119,7 @@ class ConferenceDetailsElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return evt => {
+    return (evt) => {
       const { tableSelect } = INPUT_EVENT_TYPES;
       const { id } = ATTRIBUTES;
       switch (evt.type) {
